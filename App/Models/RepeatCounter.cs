@@ -42,9 +42,30 @@ namespace Application.Models
             return s1 == s2;
         }
 
-        public static int GetWordCount(string sentence, string word)
+        public static int GetWordCount(string sentence, string check)
         {
-            return -1;
+            string[] words = sentence.Split(' ');
+            int count = 0;
+            bool foundRealWord = false;
+
+            foreach(string word in words)
+            {
+                if(RemoveNonLetters(word) != "")
+                {
+                    foundRealWord = true;
+                }
+                if(CheckEqual(word, check))
+                {
+                    count += 1;
+                }
+            }
+
+            if(!foundRealWord)
+            {
+                return -1;
+            }
+
+            return count;
         }
 
     }

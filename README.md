@@ -20,7 +20,7 @@
         * Expected Output: False
     * Testing strings against themselves to ensure that the CheckEqual method does not register them as the same word, since they are not words.
 * RepeatCounter has a GetWordCount method which splits a given sentence into space-separated words, then runs CheckEqual on each of those words against another input word, and returns the number of times the input word occurs in the given sentence.
-    * Example Input: "I have three cute kittens. Kittens are totally adorable!", "kitten"
+    * Example Input: "I have three cute kittens. Kittens are totally adorable!", "kittens"
         * Expected Output: 2
     * Testing a sentence that should also be compliant with other CheckEqual tests ensures that nothing breaks between the two methods.
 * GetWordCount returns -1 if either input contains no letter characters or is empty.
