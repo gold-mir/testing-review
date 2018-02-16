@@ -6,8 +6,17 @@ namespace Application.Controllers
 {
     public class HomeController : Controller
     {
-        [Route("/")]
+
+        public string wordCount;
+
+        [HttpGet("/")]
         public ActionResult Index()
+        {
+            return View(wordCount);
+        }
+
+        [HttpPost("/")]
+        public ActionResult CheckWords()
         {
             return View();
         }
