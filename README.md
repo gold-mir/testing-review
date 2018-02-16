@@ -5,14 +5,14 @@
     * Example Input: "Kitten", "Puppy"
         * Expected Output: False
     * Using simple one-word inputs for these tests ensures that there won't be complications caused by multi-word strings.
-* CheckEqual method ignores non letter characters
-    * Example Input: "Kitten!", "Kitten."
-        * Expected Output: True
-    * Reusing the same word from the first test with punctuation means that we're testing something we already know passes test 1.
 * CheckEqual ignores capitalization
     * Example Input: "kitten", "KIttEn"
         * Expected Output: True
-    * Again reusing "kitten" as our test word
+    * Reusing the same word from the first test with punctuation means that we're testing something we already know passes test 1.
+* CheckEqual method ignores non letter characters
+    * Example Input: "Kitten!", "Kitten."
+        * Expected Output: True
+    * Again reusing "kitten" as test word
 * CheckEqual returns false for non-legal inputs such as a word with no letter characters or an empty string
     * Example Input: "", ""
         * Expected Output: False
