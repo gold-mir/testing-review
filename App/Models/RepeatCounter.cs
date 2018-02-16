@@ -31,8 +31,15 @@ namespace Application.Models
 
         public static bool CheckEqual(string s1, string s2)
         {
+            s1 = RemoveNonLetters(s1.ToLower());
+            s2 = RemoveNonLetters(s2.ToLower());
 
-            return RemoveNonLetters(s1.ToLower()) == RemoveNonLetters(s2.ToLower());
+            if(s1 == "" || s2 == "")
+            {
+                return false;
+            }
+
+            return s1 == s2;
         }
 
         public static int GetWordCount(string sentence, string word)

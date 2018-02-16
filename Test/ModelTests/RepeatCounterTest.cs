@@ -18,11 +18,18 @@ namespace Application.Tests
         {
             Assert.IsTrue(RepeatCounter.CheckEqual("kitten", "KIttEn"));
         }
-        
+
         [TestMethod]
         public void CheckEqual_IgnoresNonLetters()
         {
             Assert.IsTrue(RepeatCounter.CheckEqual("Kitten!!!", "Kitten."));
+        }
+
+        [TestMethod]
+        public void CheckEqual_ReturnsFalseOnBadOrEmptyInput()
+        {
+            Assert.IsFalse(RepeatCounter.CheckEqual("", ""));
+            Assert.IsFalse(RepeatCounter.CheckEqual("123", "123"));
         }
     }
 }
