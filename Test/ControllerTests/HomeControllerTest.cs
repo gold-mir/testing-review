@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Application.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Application.Tests
 {
@@ -25,7 +26,7 @@ namespace Application.Tests
 
             var model = (home.Index() as ViewResult).ViewData.Model;
 
-            Assert.IsInstanceOfType(model, typeof(string));
+            Assert.IsInstanceOfType(model, typeof(Dictionary<string, string>));
         }
     }
 }

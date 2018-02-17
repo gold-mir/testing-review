@@ -64,9 +64,7 @@ namespace Application.Models
             {
                 return -1;
             }
-
             return count;
         }
-
     }
 }

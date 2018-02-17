@@ -5,10 +5,18 @@
         <title>Application</title>
     </head>
     <body>
+        <h1>Word Counter!</h1>
+
         <form id="word-counter" action="/" method="post">
             <label>Enter a Sentence<input type="text" name="sentence-input"></label>
             <label>Enter a Word<input type="text" name="word-input"></label>
             <button type="submit" name="button">Count Words!</button>
         </form>
+        @{
+            if(Model != null && Model["sentence"] != "")
+            {
+                <h3>The word "@Model["word"]" occurs @Model["count"] times in the sentence "@Model["sentence"]".</h3>
+            }
+        }
     </body>
 </html>
